@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+.env.*
+wp-config.php
+*.sql
+*.sql.gz
+*.log
+*.zip
+node_modules/
+.captures/
