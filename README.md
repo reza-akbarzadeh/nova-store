@@ -6,6 +6,8 @@
 
 RTL · Responsive layout · Light & dark themes · Customer accounts · Editorial magazine
 
+**[مشاهدهٔ آنلاین نمونه‌کار / View portfolio](https://reza-akbarzadeh.github.io/nova-store/)**
+
 </div>
 
 ![Nova Store — light homepage](docs/images/home-light.png)
@@ -16,7 +18,7 @@ RTL · Responsive layout · Light & dark themes · Customer accounts · Editoria
 قالب اختصاصی پروژه، ویترین فروشگاه، حساب مشتری، مجله و رابط موبایل را در یک ظاهر هماهنگ ارائه می‌کند.
 این مخزن شامل **کد قالب اختصاصی** است؛ هستهٔ وردپرس، افزونه‌ها، رمزها، دیتابیس و اطلاعات مشتریان در آن قرار ندارند.
 
-**برای دیدن نمونه‌کار نیازی به نصب ندارید:** تصاویر زیر را ببینید یا فایل [گالری پروژه](docs/index.html) را پس از دریافت مخزن در مرورگر باز کنید.
+**برای دیدن نمونه‌کار نیازی به نصب ندارید:** [گالری آنلاین پروژه](https://reza-akbarzadeh.github.io/nova-store/) را باز کنید یا تصاویر زیر را ببینید.
 تصاویر از اجرای واقعی نسخهٔ محلی گرفته شده‌اند. این گالری، نمایش تصویری پروژه است؛ فروشگاه آنلاین و فعال نیست.
 
 ## Preview / تصاویر پروژه
