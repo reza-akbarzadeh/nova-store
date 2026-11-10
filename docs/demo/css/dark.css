@@ -1,0 +1,105 @@
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --nova-bg: #2c354b;
+    --nova-white: #38435c;
+    --nova-media: #414e69;
+    --nova-ink: #f5f6ff;
+    --nova-text: #e0e6f5;
+    --nova-muted: #b9c5df;
+    --nova-line: #52617f;
+    --nova-shadow: 0 12px 32px rgba(15, 23, 48, .18);
+}
+
+html[data-theme="dark"] body {
+    background: var(--nova-bg);
+}
+
+html[data-theme="dark"] .nova-header {
+    background: #333e56;
+    border-bottom: 1px solid #ffffff12;
+    box-shadow: 0 5px 25px #10193615;
+}
+
+html[data-theme="dark"] .nova-search, html[data-theme="dark"] .nova-search-results, html[data-theme="dark"] .nova-mega-menu {
+    background: #414d68;
+}
+
+html[data-theme="dark"] .nova-footer {
+    background: #303b52;
+}
+
+html[data-theme="dark"] .nova-product-card, html[data-theme="dark"] .nova-products-grid .nova-product-card, html[data-theme="dark"] .woocommerce ul.products li.product, html[data-theme="dark"] .nova-story-card {
+    background: linear-gradient(145deg, #3c4863, #354158);
+    border-color: #ffffff15;
+}
+
+html[data-theme="dark"] .nova-product-card:hover, html[data-theme="dark"] .woocommerce ul.products li.product:hover, html[data-theme="dark"] .nova-story-card:hover {
+    border-color: #b2a5f56b;
+    box-shadow: 0 10px 26px #151f3f30;
+}
+
+html[data-theme="dark"] .nova-mobile-menu__panel {
+    background: radial-gradient(ellipse at 100% 0, #9a85e72e, transparent 55%), linear-gradient(165deg, #3c4865, #303c54);
+    border-left: 1px solid #c3b5ff36;
+}
+
+html[data-theme="dark"] .nova-mobile-menu__head {
+    padding: 18px 14px;
+    border: 1px solid #ffffff16;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #b2a4f51a, #73d0dd0d);
+}
+
+html[data-theme="dark"] .nova-mobile-menu__head strong {
+    color: #dfc9ff;
+    text-shadow: 0 2px 20px #b9a0ff29;
+}
+
+html[data-theme="dark"] .nova-mobile-menu__close, html[data-theme="dark"] .nova-menu-toggle {
+    color: #e0d3ff;
+    background: #ffffff0c;
+    border-color: #ffffff26;
+}
+
+html[data-theme="dark"] .nova-mobile-menu__links > a {
+    border: 1px solid transparent;
+    transition: background-color .2s, border-color .2s, transform .2s;
+}
+
+html[data-theme="dark"] .nova-mobile-menu__links > a:hover, html[data-theme="dark"] .nova-mobile-menu__links > a[aria-current="page"] {
+    color: #f2eaff;
+    background: linear-gradient(100deg, #a998ed28, #8fcfe910);
+    border-color: #cbb7ff3d;
+    transform: translateX(-3px);
+}
+
+html[data-theme="dark"] .nova-mobile-menu__links > a > span {
+    color: #baa9ef;
+}
+
+html[data-theme="dark"] .nova-amazing {
+    background: linear-gradient(125deg, #6a425e, #73516f 55%, #555a84);
+    border: 1px solid #f1c1e02b;
+}
+
+html[data-theme="dark"] .nova-theme-toggle {
+    background: linear-gradient(120deg, #6b62a0, #4d6d8b);
+    border-color: #c4b4ff80;
+    box-shadow: 0 2px 12px #ae97ff20;
+}
+
+html[data-theme="dark"] .nova-theme-toggle__thumb {
+    background: #e3d9ff;
+}
+
+html[data-theme="dark"] .nova-theme-toggle__moon {
+    color: #45466f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html[data-theme="dark"] .nova-mobile-menu__links > a {
+        transition: none;
+        transform: none;
+    }
+
+}

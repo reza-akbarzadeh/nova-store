@@ -6,7 +6,7 @@
 
 RTL · Responsive layout · Light & dark themes · Customer accounts · Editorial magazine
 
-**[مشاهدهٔ آنلاین نمونه‌کار / View portfolio](https://reza-akbarzadeh.github.io/nova-store/)**
+**[اجرای دموی تعاملی / Open interactive demo](https://reza-akbarzadeh.github.io/nova-store/)** · **[گالری تصاویر وردپرس](https://reza-akbarzadeh.github.io/nova-store/gallery.html)**
 
 </div>
 
@@ -18,8 +18,10 @@ RTL · Responsive layout · Light & dark themes · Customer accounts · Editoria
 قالب اختصاصی پروژه، ویترین فروشگاه، حساب مشتری، مجله و رابط موبایل را در یک ظاهر هماهنگ ارائه می‌کند.
 این مخزن شامل **کد قالب اختصاصی** است؛ هستهٔ وردپرس، افزونه‌ها، رمزها، دیتابیس و اطلاعات مشتریان در آن قرار ندارند.
 
-**برای دیدن نمونه‌کار نیازی به نصب ندارید:** [گالری آنلاین پروژه](https://reza-akbarzadeh.github.io/nova-store/) را باز کنید یا تصاویر زیر را ببینید.
-تصاویر از اجرای واقعی نسخهٔ محلی گرفته شده‌اند. این گالری، نمایش تصویری پروژه است؛ فروشگاه آنلاین و فعال نیست.
+**برای دیدن نمونه‌کار نیازی به نصب ندارید:** [دموی تعاملی پروژه](https://reza-akbarzadeh.github.io/nova-store/) را باز کنید.
+صفحهٔ اصلی، فروشگاه، جستجو، محصول، مجله و سبد آزمایشی قابل استفاده‌اند. ورود و پرداخت واقعی انجام نمی‌شود.
+دمو در `docs/` قرار دارد و از کد قالب وردپرس در `nova/` جداست. تصاویر زیر از اجرای واقعی نسخهٔ وردپرس گرفته شده‌اند.
+جزئیات: [معماری و محدودیت‌های دمو](docs/DEMO.md).
 
 ## Preview / تصاویر پروژه
 
@@ -106,9 +108,11 @@ nova/
 ## English overview
 
 Nova is a Persian, RTL storefront built with WordPress and WooCommerce. This repository contains
-the custom theme source and screenshots, rather than a full WordPress installation or a database dump.
+the custom theme source, screenshots, and a separate static interactive demo, rather than a full WordPress installation or a database dump.
 The theme includes a responsive catalog, live product search, customer account customization,
 a slide-out mobile menu, persistent light/dark modes, and an editorial magazine managed through WordPress posts.
+The GitHub Pages demo uses sample data and a browser-only cart. It does not authenticate users,
+submit real orders, send emails, or process payments. The WordPress theme remains in `nova/` unchanged.
 
 To install, copy `nova/` to `wp-content/themes/`, install WooCommerce, activate the theme, configure
 the store pages and a static front page, then save permalink settings. See [setup notes](docs/SETUP.md)

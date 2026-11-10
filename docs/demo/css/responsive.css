@@ -1,0 +1,657 @@
+/* Shared layout and a modal drawer, used by every frontend template. */
+.site-main,.nova-shell,.nova-header__main>* {
+    min-width:0
+}
+
+.nova-search input[type="search"] {
+    width:100%;
+    min-width:0
+}
+
+.nova-menu-toggle {
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:40px;
+    flex-shrink:0;
+    border:1px solid var(--nova-line);
+    border-radius:10px;
+    background:var(--nova-white);
+    color:var(--nova-ink);
+    cursor:pointer
+}
+
+.nova-menu-is-open,.nova-menu-is-open body {
+    overflow:hidden;
+    overscroll-behavior:none
+}
+
+.nova-mobile-menu {
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    height:100dvh;
+    max-width:none;
+    max-height:none;
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:var(--nova-text);
+    overflow:hidden;
+    direction:rtl
+}
+
+.nova-mobile-menu[open] {
+    display:flex;
+    justify-content:flex-start
+}
+
+.nova-mobile-menu::backdrop {
+    background:rgba(20,25,33,0);
+    transition:background-color .24s ease
+}
+
+.nova-mobile-menu.is-open::backdrop {
+    background:rgba(20,25,33,.5)
+}
+
+.nova-mobile-menu__panel {
+    display:flex;
+    flex-direction:column;
+    width:min(360px,88vw);
+    height:100%;
+    padding:24px 20px max(24px,env(safe-area-inset-bottom));
+    padding-top:max(24px,env(safe-area-inset-top));
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    background:var(--nova-white);
+    border-left:1px solid var(--nova-line);
+    box-shadow:-10px 0 40px #0002;
+    transform:translateX(105%);
+    transition:transform .24s cubic-bezier(.22,1,.36,1)
+}
+
+.nova-mobile-menu.is-open .nova-mobile-menu__panel {
+    transform:translateX(0)
+}
+
+.nova-mobile-menu__head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding-bottom:22px;
+    margin-bottom:15px;
+    border-bottom:1px solid var(--nova-line)
+}
+
+.nova-mobile-menu__head strong {
+    display:block;
+    font-size:32px;
+    color:var(--nova-red);
+    line-height:1.5
+}
+
+.nova-mobile-menu__head small {
+    font-size:10px;
+    color:var(--nova-muted)
+}
+
+.nova-mobile-menu__close {
+    display:grid;
+    place-items:center;
+    flex-shrink:0;
+    width:40px;
+    height:40px;
+    border:1px solid var(--nova-line);
+    border-radius:12px;
+    background:var(--nova-media,#f5f5f7);
+    color:var(--nova-ink);
+    font-size:28px;
+    cursor:pointer
+}
+
+.nova-mobile-menu__links {
+    display:grid;
+    gap:5px
+}
+
+.nova-mobile-menu a {
+    color:var(--nova-text);
+    overflow-wrap:anywhere
+}
+
+.nova-mobile-menu__links>a {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:46px;
+    padding:10px 13px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+    transition:background-color .2s,color .2s
+}
+
+.nova-mobile-menu__links>a>span {
+    color:var(--nova-muted)
+}
+
+.nova-mobile-menu a:hover,.nova-mobile-menu a[aria-current="page"] {
+    background:var(--nova-media,#f5f5f7);
+    color:var(--nova-red)
+}
+
+.nova-mobile-menu a:focus-visible,.nova-mobile-menu button:focus-visible,.nova-mobile-menu summary:focus-visible,.nova-menu-toggle:focus-visible {
+    outline:2px solid var(--nova-red);
+    outline-offset:2px
+}
+
+.nova-mobile-menu__categories {
+    border-block:1px solid var(--nova-line);
+    margin-top:18px;
+    padding-block:6px
+}
+
+.nova-mobile-menu__categories summary {
+    padding:12px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:13px
+}
+
+.nova-mobile-menu ul {
+    list-style:none;
+    padding:0;
+    margin:0
+}
+
+.nova-mobile-menu li a {
+    display:block;
+    padding:11px 14px;
+    font-size:12px;
+    border-radius:8px
+}
+
+.nova-mobile-menu li ul {
+    padding-right:14px;
+    border-right:1px solid var(--nova-line);
+    margin-right:14px
+}
+
+.nova-mobile-menu__pages {
+    padding-top:18px
+}
+
+.nova-mobile-menu__pages h2 {
+    margin:0 12px 8px;
+    font-size:11px;
+    color:var(--nova-muted)
+}
+
+.nova-mobile-menu__note {
+    padding:24px 12px 0;
+    margin-top:auto;
+    font-size:10px;
+    color:var(--nova-muted)
+}
+
+.woocommerce div.product {
+    grid-template-columns:minmax(0,45fr) minmax(0,55fr)
+}
+
+.woocommerce div.product>* {
+    min-width:0
+}
+
+.woocommerce div.product .related,.woocommerce div.product .upsells {
+    grid-column:1/-1
+}
+
+.nova-content img,.nova-content video {
+    max-width:100%;
+    height:auto
+}
+
+.nova-content iframe,.nova-content figure {
+    max-width:100%
+}
+
+.wp-block-table {
+    overflow-x:auto
+}
+
+@media(min-width:1001px) {
+    .nova-menu-toggle {
+        display:none
+    }
+
+}
+
+@media(max-width:1000px) {
+    .nova-menu-toggle {
+        display:inline-flex
+    }
+
+    .nova-header__nav {
+        display:none
+    }
+
+    .nova-header__main {
+        height:auto;
+        min-height:72px;
+        gap:14px;
+        flex-wrap:wrap;
+        padding-block:12px
+    }
+
+    .nova-header__actions {
+        gap:10px
+    }
+
+    .nova-search-wrap {
+        order:3;
+        width:100%
+    }
+
+    .nova-header .nova-search {
+        width:100%
+    }
+
+    .nova-header .nova-mega-menu {
+        display:none
+    }
+
+    .nova-logo {
+        min-width:100px
+    }
+
+    .nova-header .nova-login {
+        font-size:12px
+    }
+
+    .woocommerce div.product {
+        grid-template-columns:1fr;
+        gap:20px
+    }
+
+    .woocommerce-checkout .col2-set {
+        grid-template-columns:1fr
+    }
+
+    .woocommerce-checkout #customer_details,.woocommerce-checkout #order_review,.woocommerce-checkout #order_review_heading,.woocommerce-cart .cart-collaterals .cart_totals {
+        float:none;
+        width:100%
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation,.woocommerce-account .woocommerce-MyAccount-content {
+        float:none;
+        width:100%
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation {
+        margin-bottom:20px
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation ul {
+        display:flex;
+        flex-wrap:wrap;
+        gap:3px
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation a {
+        padding:9px 12px;
+        font-size:12px
+    }
+
+}
+
+@media(max-width:700px) {
+    .nova-shell {
+        width:calc(100% - 24px)
+    }
+
+    .campaign-bar {
+        height:auto;
+        min-height:34px;
+        gap:12px;
+        padding:7px 12px;
+        font-size:10px;
+        text-align:center
+    }
+
+    .campaign-bar strong {
+        font-size:14px;
+        white-space:nowrap
+    }
+
+    .nova-header__main {
+        gap:10px;
+        padding-block:10px
+    }
+
+    .nova-header__actions {
+        gap:7px
+    }
+
+    .nova-header .nova-login {
+        display:none
+    }
+
+    .nova-header .nova-cart {
+        font-size:18px;
+        padding:6px
+    }
+
+    .nova-header .nova-logo {
+        min-width:70px
+    }
+
+    .nova-hero {
+        width:calc(100% - 24px);
+        height:330px
+    }
+
+    .nova-hero__copy {
+        padding:35px 26px
+    }
+
+    .nova-section {
+        padding-block:30px
+    }
+
+    .nova-section-head {
+        gap:12px
+    }
+
+    .nova-section-head h2 {
+        font-size:18px
+    }
+
+    .nova-section-head>a {
+        flex-shrink:0
+    }
+
+    .nova-amazing {
+        grid-template-columns:100px minmax(0,1fr);
+        padding:12px;
+        gap:8px;
+        width:calc(100% - 24px);
+        margin-inline:auto
+    }
+
+    .nova-amazing__title h2 {
+        font-size:19px
+    }
+
+    .nova-products-track {
+        min-width:0;
+        overscroll-behavior-inline:contain
+    }
+
+    .nova-products-track .nova-product-card {
+        flex-basis:185px
+    }
+
+    .nova-fresh strong {
+        font-size:20px
+    }
+
+    .nova-fresh>div {
+        flex-wrap:wrap
+    }
+
+    .nova-fresh p {
+        max-width:100%;
+        font-size:20px
+    }
+
+    .nova-category-grid span {
+        width:clamp(50px,17vw,72px);
+        height:clamp(50px,17vw,72px)
+    }
+
+    .nova-category-grid b {
+        font-size:10px
+    }
+
+    .nova-ads>a {
+        min-width:0
+    }
+
+    .nova-ads strong {
+        font-size:19px
+    }
+
+    .nova-footer__head {
+        gap:16px
+    }
+
+    .nova-footer__links {
+        grid-template-columns:1fr 1fr;
+        gap:20px
+    }
+
+    .nova-footer p {
+        font-size:12px
+    }
+
+    .woocommerce div.product .product_title {
+        font-size:22px;
+        overflow-wrap:anywhere
+    }
+
+    .woocommerce div.product form.cart {
+        display:flex;
+        flex-wrap:wrap;
+        gap:12px
+    }
+
+    .woocommerce div.product form.cart .variations,.woocommerce div.product form.cart .single_variation_wrap {
+        width:100%
+    }
+
+    .woocommerce div.product .woocommerce-tabs ul.tabs {
+        display:flex;
+        overflow-x:auto;
+        gap:8px
+    }
+
+    .woocommerce div.product .woocommerce-tabs ul.tabs li {
+        flex-shrink:0;
+        margin:0
+    }
+
+    .woocommerce ul.products li.product .price {
+        font-size:11px
+    }
+
+    .woocommerce .woocommerce-result-count,.woocommerce .woocommerce-ordering {
+        float:none;
+        width:100%
+    }
+
+    .woocommerce .woocommerce-ordering select.orderby {
+        width:100%
+    }
+
+    .woocommerce table.shop_table {
+        font-size:12px;
+        overflow-wrap:anywhere
+    }
+
+    .woocommerce form .form-row-first,.woocommerce form .form-row-last {
+        float:none;
+        width:100%
+    }
+
+    .woocommerce table.cart td.actions .coupon {
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px
+    }
+
+    .woocommerce table.cart td.actions .coupon .input-text {
+        flex:1;
+        min-width:100px;
+        width:auto!important
+    }
+
+    .woocommerce table.cart td.actions .coupon .button {
+        width:auto!important
+    }
+
+    .woocommerce #payment ul.payment_methods {
+        padding:16px
+    }
+
+}
+
+@media(max-width:380px) {
+    .nova-header__actions {
+        gap:4px
+    }
+
+    .nova-theme-toggle {
+        width:56px
+    }
+
+    .nova-theme-toggle__thumb {
+        width:22px;
+        height:22px;
+        top:4px
+    }
+
+    html[data-theme="dark"] .nova-theme-toggle__thumb {
+        transform:translateX(26px)
+    }
+
+    .nova-header .nova-logo {
+        min-width:60px
+    }
+
+    .nova-ads strong {
+        font-size:16px
+    }
+
+    .nova-product-price>strong,.nova-product-price ins {
+        font-size:12px
+    }
+
+    .woocommerce ul.products {
+        gap:6px
+    }
+
+    .woocommerce ul.products li.product {
+        padding:8px
+    }
+
+    .woocommerce ul.products li.product a.button {
+        font-size:10px
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .nova-mobile-menu::backdrop,.nova-mobile-menu__panel,.nova-mobile-menu a {
+        transition:none!important
+    }
+
+}
+
+/* Drawn icons keep a consistent shape across devices and fonts. */
+.nova-menu-toggle,.nova-mobile-menu__close {
+    width:42px;
+    height:42px;
+    padding:0;
+    border-radius:13px;
+    box-shadow:0 2px 5px rgba(30,35,45,.04);
+    transition:background-color .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease;
+    -webkit-tap-highlight-color:transparent
+}
+
+.nova-menu-icon {
+    position:relative;
+    display:block;
+    flex-shrink:0;
+    width:22px;
+    height:22px;
+    color:currentColor;
+    pointer-events:none;
+    transition:transform .32s cubic-bezier(.22,1,.36,1)
+}
+
+.nova-menu-icon>span {
+    position:absolute;
+    right:1px;
+    top:10px;
+    width:20px;
+    height:2px;
+    background:currentColor;
+    border-radius:4px;
+    transform-origin:center;
+    transition:transform .32s cubic-bezier(.22,1,.36,1),width .25s ease,opacity .18s ease
+}
+
+.nova-menu-icon>span:nth-child(1) {
+    transform:translateY(-6px)
+}
+
+.nova-menu-icon>span:nth-child(2) {
+    width:14px
+}
+
+.nova-menu-icon>span:nth-child(3) {
+    width:17px;
+    transform:translateY(6px)
+}
+
+.nova-menu-toggle[aria-expanded="true"] .nova-menu-icon>span:nth-child(1),.nova-mobile-menu.is-open .nova-mobile-menu__close .nova-menu-icon>span:nth-child(1) {
+    width:20px;
+    transform:rotate(45deg)
+}
+
+.nova-menu-toggle[aria-expanded="true"] .nova-menu-icon>span:nth-child(2),.nova-mobile-menu.is-open .nova-mobile-menu__close .nova-menu-icon>span:nth-child(2) {
+    opacity:0;
+    transform:scaleX(.2)
+}
+
+.nova-menu-toggle[aria-expanded="true"] .nova-menu-icon>span:nth-child(3),.nova-mobile-menu.is-open .nova-mobile-menu__close .nova-menu-icon>span:nth-child(3) {
+    width:20px;
+    transform:rotate(-45deg)
+}
+
+.nova-menu-toggle:active,.nova-mobile-menu__close:active {
+    transform:scale(.92);
+    box-shadow:inset 0 2px 5px rgba(30,35,45,.12)
+}
+
+@media(hover:hover) {
+    .nova-menu-toggle:hover,.nova-mobile-menu__close:hover {
+        border-color:var(--nova-red);
+        color:var(--nova-red);
+        box-shadow:0 5px 14px rgba(239,64,86,.12)
+    }
+
+    .nova-menu-toggle:hover .nova-menu-icon>span {
+        width:20px
+    }
+
+    .nova-mobile-menu__close:hover .nova-menu-icon {
+        transform:rotate(90deg)
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .nova-menu-toggle,.nova-mobile-menu__close,.nova-menu-icon,.nova-menu-icon>span {
+        transition:none!important
+    }
+
+    .nova-mobile-menu__close:hover .nova-menu-icon {
+        transform:none
+    }
+
+}
